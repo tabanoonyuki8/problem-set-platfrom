@@ -6,18 +6,13 @@ function ProblemTable() {
   const [status, setStatus] = useState('');
 
   //store problem data 
-  const [problems, setProblems] = useState([]);
-
-
-  
-  
-  const handleSubmitBtn = (event) => {
+  const [problems, setProblems] = useState([]); const handleSubmitBtn = (event) => {
     event.preventDefault();
    
     const newProblem = { problemName, status };
         const setNewProblem=[...problems, newProblem];
     setProblems(setNewProblem);
-  //clear input
+  //clear input from field
     setProblemName('');
     setStatus('');
   };
